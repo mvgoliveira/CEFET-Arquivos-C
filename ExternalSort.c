@@ -22,8 +22,9 @@ void mergeSort(long qtdRegistros, int numArq, FILE *entrada) {
   int tamanhoSaida;
   FILE *saida;
   char nomeArq[32];
+  int i;
   
-  for (int i = 0; i < numArq; i++) {
+  for (i = 0; i < numArq; i++) {
     Endereco *e;
     
     if (i == 0) {
@@ -118,12 +119,13 @@ char *intercala(int numArq, char *arq1, int arq2) {
 void test() {
   FILE *entrada;
   Endereco e;
+  int i;
 
   entrada = fopen("cep-1-2-3-4.dat", "rb");
 
   fread(&e, sizeof(Endereco), 1, entrada);
 
-  for (int i = 0; i < 50; i++) {
+  for (i = 0; i < 50; i++) {
     printf("\n%.8s", e.cep);
     fread(&e, sizeof(Endereco), 1, entrada);
   }
@@ -134,6 +136,10 @@ void test() {
 int main(void) {
   FILE *entrada;
   long tamanho, qtdRegistros;
+  int n;
+
+  printf("Digite a quantidade de divisões no arquivo: ");
+  scanf("%d", &n);
 
   entrada = fopen("cep.dat", "rb");
 
@@ -144,7 +150,7 @@ int main(void) {
 
   rewind(entrada);
 
-  mergeSort(qtdRegistros, 4, entrada);
+  mergeSort(qtdRegistros, n, entrada);
   
   fclose(entrada);
   
