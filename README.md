@@ -11,8 +11,8 @@ Utilização: Para utilizar, na mesma pasta do arquivo "AchaCep.C", precisa exis
 
 
 ### Ordenação Externa
-Arquivo: `ExternalSort.c`
+**Arquivo**: `ExternalSort.c`
 
-Finalidade: Realizar ordenação externa no arquivo "cep.dat".
+**Finalidade**: Realizar ordenação externa no arquivo "cep.dat".
 
-utilização: Para utilizar, na mesma pasta do arquivo "ExternalSort.c", precisa existir um arquivo "cep.data" contendo os valores de todos os CEPs, que será utilizado para fazer a ordenação externa. Na execuão do programa o usuário precisará informar a quantidade de arquivo serão gerados para divisão do arquivo principal.
+**utilização**: Para utilizar, na mesma pasta do arquivo "ExternalSort.c", precisa existir um arquivo "cep.data" contendo os valores de todos os CEPs, que será utilizado para fazer a ordenação externa. Na execuão do programa o usuário precisará informar a quantidade de arquivo serão gerados para divisão do arquivo principal.
