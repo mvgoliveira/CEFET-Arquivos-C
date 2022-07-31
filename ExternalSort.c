@@ -116,23 +116,6 @@ char *intercala(int numArq, char *arq1, int arq2) {
   return nomeArq;
 }
 
-void test() {
-  FILE *entrada;
-  Endereco e;
-  int i;
-
-  entrada = fopen("cep-1-2-3-4.dat", "rb");
-
-  fread(&e, sizeof(Endereco), 1, entrada);
-
-  for (i = 0; i < 50; i++) {
-    printf("\n%.8s", e.cep);
-    fread(&e, sizeof(Endereco), 1, entrada);
-  }
-
-  fclose(entrada);
-}
-
 int main(void) {
   FILE *entrada;
   long tamanho, qtdRegistros;
@@ -155,8 +138,6 @@ int main(void) {
   fclose(entrada);
   
   intercala(4, "1", 2);
-  
-  test();
     
   return 0;
 }
